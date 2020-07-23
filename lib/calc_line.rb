@@ -32,15 +32,3 @@ def include_extname(extname_arr, extname)
   end
   return false
 end
-
-args = ARGV
-
-input_path = args[0]
-file_exts = %w(cs xml js)
-
-total_line =
-traverse_dir input_path, file_exts do |file|
-  calc_code_line file
-end
-
-p "total line #{total_line}"

@@ -1,0 +1,11 @@
+require 'calc_line.rb'
+
+input_path = ARGV[0]
+file_exts = %w(cs xml js c cpp)
+
+total_line =
+traverse_dir input_path, file_exts do |file|
+  calc_code_line file
+end
+
+p "total line #{total_line}"
